@@ -14,7 +14,7 @@ I tried to make this as flexible as possible, so in order to support multiple ty
 you need to explain to the program how to print your tree. The way to accomplish this is by passing 2 lambdas:
 1) getChildren: Given a node of your tree type returns an IEnumerable of all its children (from left to right).
     For example if this is your tree implementation:
-```csharp
+    ```csharp
     class Tree<T>{
         private T val;
         private List<Tree<T>> children;
@@ -30,13 +30,13 @@ you need to explain to the program how to print your tree. The way to accomplish
         public T GetValue() => this.val;
         public List<Tree<T>> GetChildren() => this.children;
     }
-```
+    ```
     Then getChildren would be as simple as:
-```csharp
+    ```csharp
     node => node.GetChildren()
-```
+    ```
     Or if your tree implementation is:
-```csharp
+    ```csharp
     class Tree<T>{
         private T val;
         private Tree<T>? rChild, lChild;
@@ -53,21 +53,21 @@ you need to explain to the program how to print your tree. The way to accomplish
         public Tree<T>? GetRChild() => this.rChild; 
         public Tree<T>? GetLChild() => this.lChild;
     }
-```
+    ```
     Then get_children would be:
-```csharp
+    ```csharp
     node => new[]{ node.GetLChild(), node.GetRChild() }
-```
+    ```
 
 2) getValue: Given a node of your tree type returns that node's value
     for example if your tree implementation has:
-```csharp
+    ```csharp
     public string GetValue(){/*...*/}
-```
+    ```
     then getValue would be:
-```csharp
+    ```csharp
     (node) => node.GetValue()
-```
+    ```
 
 
 In order to print the tree you first need to make a PrettyPrintTree object which you pass your lambdas (and any other settings) to, then you can call it whenever you want without needing to pass the lambdas each time.
@@ -114,7 +114,7 @@ public class Test{
     }
 }
 ```
-![plot](Imagesxample.JPG)
+![plot]ExampleImages\example.JPG)
 
 
 # Other Settings
@@ -131,7 +131,7 @@ var pt = new PrettyPrintTree<Tree<string>>(
     trim: 3
 );
 ```
-![plot](Imagesrim.JPG)
+![plot](ExampleImages\trim.JPG)
 
 
 ## Return Instead of Print
@@ -157,7 +157,7 @@ var pt = new PrettyPrintTree<Tree<string>>(
     color: Color.BLUE
 );
 ```
-![plot](Imageslue.JPG)
+![plot](ExampleImages\blue.JPG)
 ```csharp
 var pt = new PrettyPrintTree<Tree<string>>(
     getChildren: (node) => node.GetChildren(),
@@ -165,7 +165,7 @@ var pt = new PrettyPrintTree<Tree<string>>(
     color: Color.NONE
 );
 ```
-![plot](Imageso_color.JPG)
+![plot](ExampleImages\no_color.JPG)
 
 
 ## Border
@@ -177,7 +177,7 @@ var pt = new PrettyPrintTree<Tree<string>>(
     border: true
 );
 ```
-![plot](Imagesorder.JPG)
+![plot](ExampleImages\border.JPG)
 
 
 ## Escape NewLines
@@ -191,7 +191,7 @@ var pt = new PrettyPrintTree<Tree<string>>(
     escapeNewline: true
 );
 ```
-![plot](Imagesew_line.JPG)
+![plot](ExampleImages\new_line.JPG)
 
 
 ## Max Depth
