@@ -223,6 +223,16 @@ Coming soon
 Coming soon
 
 
-# Horizontal
+## Horizontal
 
 Coming soon
+
+
+## Python
+
+I made a Python version too: https://github.com/AharonSambol/PrettyPrintTree
+
+
+## Java
+
+I made a Java version too: https://github.com/AharonSambol/PrettyPrintTreeJava
