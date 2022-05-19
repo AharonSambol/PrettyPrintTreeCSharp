@@ -228,11 +228,11 @@ Coming soon
 Coming soon
 
 
-## Python
+# Python
 
 I made a Python version too: https://github.com/AharonSambol/PrettyPrintTree
 
 
-## Java
+# Java
 
 I made a Java version too: https://github.com/AharonSambol/PrettyPrintTreeJava
