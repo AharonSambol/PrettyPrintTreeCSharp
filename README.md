@@ -6,6 +6,7 @@ It supports trees with any kind of data (as long it can be turned into a string)
 
 And even supports multi lined nodes (as in strings with \n).
 
+![plot](ExampleImages/example.JPG)
 
 
 # Documentation
@@ -114,7 +115,7 @@ public class Test{
     }
 }
 ```
-![plot]ExampleImages\example.JPG)
+![plot](ExampleImages/example.JPG)
 
 
 # Other Settings
@@ -131,7 +132,7 @@ var pt = new PrettyPrintTree<Tree<string>>(
     trim: 3
 );
 ```
-![plot](ExampleImages\trim.JPG)
+![plot](ExampleImages/trim.JPG)
 
 
 ## Return Instead of Print
@@ -157,7 +158,7 @@ var pt = new PrettyPrintTree<Tree<string>>(
     color: Color.BLUE
 );
 ```
-![plot](ExampleImages\blue.JPG)
+![plot](ExampleImages/blue.JPG)
 ```csharp
 var pt = new PrettyPrintTree<Tree<string>>(
     getChildren: (node) => node.GetChildren(),
@@ -165,7 +166,7 @@ var pt = new PrettyPrintTree<Tree<string>>(
     color: Color.NONE
 );
 ```
-![plot](ExampleImages\no_color.JPG)
+![plot](ExampleImages/no_color.JPG)
 
 
 ## Border
@@ -177,7 +178,7 @@ var pt = new PrettyPrintTree<Tree<string>>(
     border: true
 );
 ```
-![plot](ExampleImages\border.JPG)
+![plot](ExampleImages/border.JPG)
 
 
 ## Escape NewLines
@@ -191,7 +192,7 @@ var pt = new PrettyPrintTree<Tree<string>>(
     escapeNewline: true
 );
 ```
-![plot](ExampleImages\new_line.JPG)
+![plot](ExampleImages/new_line.JPG)
 
 
 ## Max Depth
